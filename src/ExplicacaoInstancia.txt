@@ -1,0 +1,9 @@
+1           //- A primeira linha é um valor numérico que identifica se é um problema de minimização (-1) ou maximização (1)
+2           //- A segunda linha é um valor numérico (x) que identifica quantas são as variáveis do problema
+3           //- A terceira linha contém x valores numéricos que identificam os coeficientes das variáveis na função objetivo.
+3   5       //- A demais linhas a partir da quarta contém x+1 valores numéricos que identificam os coeficientes das variáveis nas
+2   1    30
+3   -1   20
+1   4    15            
+            
+            

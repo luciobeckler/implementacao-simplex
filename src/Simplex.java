@@ -1,5 +1,7 @@
 public class Simplex {
+
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        File file = new File("src/instancia.txt");
+        file.ReadFile();
     }
 }
