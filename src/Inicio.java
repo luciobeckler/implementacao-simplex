@@ -1,7 +1,7 @@
-public class Simplex {
+public class Inicio {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("src/instancia.txt");
+        Arquivo file = new Arquivo("src/instancia.txt");
         file.ReadFile();
     }
 }
