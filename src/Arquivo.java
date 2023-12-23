@@ -3,12 +3,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Arquivo {
-  private String filePath;
-  private int numeroOrigensM;
-  private int numeroDestinosN;
-  private int[] vetorAtendimentoOrigem;
-  private int[] vetorDemandasDestino;
-  private double[][] matrizCustoTransporte;
+  public String filePath;
+  public int numeroOrigensM;
+  public int numeroDestinosN;
+  public double[] vetorOfertaOrigem;
+  public double[] vetorDemandasDestino;
+  public double[][] matrizCustoTransporte;
 
   public String getFilePath() {
     return filePath;
@@ -39,11 +39,11 @@ public class Arquivo {
     String linha = scanner.nextLine();
     String[] numerosOrigem = linha.split(" ");
 
-    vetorAtendimentoOrigem = new int[numerosOrigem.length];
+    vetorOfertaOrigem = new double[numerosOrigem.length];
 
-    for (int i = 0; i < vetorAtendimentoOrigem.length; i++) {
-      vetorAtendimentoOrigem[i] = Integer.parseInt(numerosOrigem[i]);
-      System.err.println(vetorAtendimentoOrigem[i]);
+    for (int i = 0; i < vetorOfertaOrigem.length; i++) {
+      vetorOfertaOrigem[i] = Integer.parseInt(numerosOrigem[i]);
+      System.err.println(vetorOfertaOrigem[i]);
 
     }
   }
@@ -52,7 +52,7 @@ public class Arquivo {
     String linha = scanner.nextLine();
     String[] numeroDestino = linha.split(" ");
 
-    vetorDemandasDestino = new int[numeroDestino.length];
+    vetorDemandasDestino = new double[numeroDestino.length];
 
     for (int i = 0; i < vetorDemandasDestino.length; i++) {
       vetorDemandasDestino[i] = Integer.parseInt(numeroDestino[i]);
