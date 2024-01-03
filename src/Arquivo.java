@@ -6,9 +6,9 @@ public class Arquivo {
   public String filePath;
   public int numeroOrigensM;
   public int numeroDestinosN;
-  public double[] vetorOfertaOrigem;
-  public double[] vetorDemandasDestino;
-  public double[][] matrizCustoTransporte;
+  public int[] vetorOfertaOrigem;
+  public int[] vetorDemandasDestino;
+  public int[][] matrizCustoTransporte;
 
   public String getFilePath() {
     return filePath;
@@ -39,7 +39,7 @@ public class Arquivo {
     String linha = scanner.nextLine();
     String[] numerosOrigem = linha.split(" ");
 
-    vetorOfertaOrigem = new double[numerosOrigem.length];
+    vetorOfertaOrigem = new int[numerosOrigem.length];
 
     for (int i = 0; i < vetorOfertaOrigem.length; i++) {
       vetorOfertaOrigem[i] = Integer.parseInt(numerosOrigem[i]);
@@ -52,7 +52,7 @@ public class Arquivo {
     String linha = scanner.nextLine();
     String[] numeroDestino = linha.split(" ");
 
-    vetorDemandasDestino = new double[numeroDestino.length];
+    vetorDemandasDestino = new int[numeroDestino.length];
 
     for (int i = 0; i < vetorDemandasDestino.length; i++) {
       vetorDemandasDestino[i] = Integer.parseInt(numeroDestino[i]);
@@ -61,7 +61,7 @@ public class Arquivo {
   }
 
   public void getCustosTransportes(Scanner scanner) {
-    matrizCustoTransporte = new double[numeroOrigensM][numeroDestinosN];
+    matrizCustoTransporte = new int[numeroOrigensM][numeroDestinosN];
 
     for (int i = 0; i < numeroOrigensM; i++) {
       String linha = scanner.nextLine();
