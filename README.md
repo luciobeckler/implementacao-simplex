@@ -1,18 +1,37 @@
-## Getting Started
+# Método Simplex - Problema de Programação Linear
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este arquivo descreve um problema de programação linear que deve ser resolvido usando o método simplex. As instruções a seguir explicam o formato dos dados de entrada e como interpretar cada linha para construir a tabela inicial do método simplex.
 
-## Folder Structure
+## Descrição do Formato do Arquivo de Entrada
 
-The workspace contains two folders by default, where:
+O problema é descrito por uma série de valores em um arquivo de texto, organizado da seguinte forma:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+1. **Primeira Linha**: Um valor numérico que identifica o tipo de problema:
+   - `1` indica que é um problema de **maximização**.
+   - `-1` indica que é um problema de **minimização**.
+   
+   No exemplo, a primeira linha é `1`, então estamos tratando de um problema de **maximização**.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+2. **Segunda Linha**: Um valor numérico `x` que representa o número de **variáveis de decisão** do problema.
+   
+   No exemplo, a segunda linha é `2`, indicando que há **2 variáveis** de decisão (\( x_1 \) e \( x_2 \)).
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+3. **Terceira Linha**: `x` valores numéricos que identificam os **coeficientes da função objetivo**.
+   
+   No exemplo, a terceira linha é `3 5`, o que significa que a função objetivo é maximizar Z = 3x_1 + 5x_2
 
-## Dependency Management
+5. **Linhas a partir da Quarta**: Cada linha contém `x + 1` valores que representam as **restrições** do problema. Os primeiros `x` valores são os coeficientes das variáveis e o último valor é o **termo independente**.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+No exemplo, temos três restrições:
+- `3 2 30` corresponde à restrição `3x_1 + 2x_2 <= 30`
+- `1 1 20` corresponde à restrição `1x_1 + 1x_2 <= 20`
+- `3 -1 15` corresponde à restrição `3x_1 - 1x_2 <= 15`
+
+## Resumo do Problema
+
+Com base nos dados de entrada, o problema de programação linear é definido como:
+
+### Função Objetivo: Maximizar Z = 3x_1 + 5x_2
+
+### Restrições:
+3x_1 + 2x_2 <= 30 1x_1 + 1x_2 <= 20 3x_1 - 1x_2 <= 15 x_1, x_2 >= 0
